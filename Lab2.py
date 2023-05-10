@@ -1,10 +1,12 @@
 
+import statistics
 def main():
     print("ET0735 (DevOps for AIoT) - Lab 2 - Introduction to Python")
     display_main_menu()
     z = get_user_input()
     calc_average_temperature(z)
     calc_min_max_temperature(z)
+    calc_median_tempertature(z)
 
 def display_main_menu():
     print("Enter some numbers separated by commas (e.g. 5, 67,32)")
@@ -23,4 +25,7 @@ def calc_min_max_temperature(z):
     p = [min(z),max(z)]
     print("The minimum temperature is "+str(p[0]))
     print("The maximum temperature is "+str(p[1]))
+def calc_median_tempertature(z):
+    median = statistics.median(z)
+    print(median)
 main()
